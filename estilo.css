@@ -1,0 +1,80 @@
+:root{
+    --fondo: rgb(252, 209, 235);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-family: "Mulish", sans-serif;
+    background: var(--fondo)
+}
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 17px;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 40px;
+   
+}
+
+
+<!-- .carusel-->
+#conteIntemCarrusel{
+    border: 1px solid black;
+    height: 100px;
+    overflow: hidden;
+   
+
+}
+
+
+.itemCarrusel {
+    border: 1px solid black;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+}
+.tarjetaCarrusel{
+background-color: rgb(rgb(199, 183, 183)) ;
+height: 100%;
+background-size: cover;
+}
+
+.flechasCarrusel{
+background-color: blueviolet;
+position: absolute;
+top: 0;
+height: 50%;
+width: 50%;
+display:flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+}
+.tarjetaCarrusel > img {
+    height: 50%;
+    width: 50%; 
+    background-size: cover;
+}
