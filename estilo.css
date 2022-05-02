@@ -1,5 +1,6 @@
 :root{
-    --fondo: rgb(252, 209, 235);
+    --fondo: rgb(212, 100, 168);
+    --fondo2: rgb(0, 0, 0);
 
 }
 
@@ -12,13 +13,19 @@
 body{
     height: 100%;
     font-family: "Mulish", sans-serif;
-    background: var(--fondo)
+    background-image: url(img/fondo.png);
+    background-color: rgb(247, 164, 236);
 }
 .contenedor {
     width: 90%;
     margin: auto;
+   
 }
 
+.contenedor h4{
+    color: rgb(250, 9, 190);
+    font-size: 20px;
+}
 
 header {
     padding: 30px 0;
@@ -38,43 +45,119 @@ header .logotipo {
    
 }
 
+/*--- Contenedor Titulo y controles ---*/
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
 
-<!-- .carusel-->
-#conteIntemCarrusel{
-    border: 1px solid black;
-    height: 100px;
-    overflow: hidden;
-   
+.contenedor-titulo-controles h3{
+    color: black;
+    font-size: 30px;
 
 }
 
+.contenedor-titulo-controles .indicadores button {
+  background-color: white;  
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
 
-.itemCarrusel {
-    border: 1px solid black;
-    width: 100%;
+}                                                
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background-color: deeppink;
+
+}
+
+/*--- Contenedor prisnsipal y flechas ---*/
+.animes-recomendados{
+    margin-bottom: 70px;
+}
+
+.animes-recomendados .contenedor-prinscipal{
+    display: flex;
+    align-items: center;
     position: relative;
-    background-size: cover;
-    overflow: hidden;
-}
-.tarjetaCarrusel{
-background-color: rgb(rgb(199, 183, 183)) ;
-height: 100%;
-background-size: cover;
+} 
+
+.animes-recomendados .contenedor-prinscipal .flecha-izquierda,
+.animes-recomendados .contenedor-prinscipal .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40PX;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+
 }
 
-.flechasCarrusel{
-background-color: blueviolet;
-position: absolute;
-top: 0;
-height: 50%;
-width: 50%;
-display:flex;
-align-items: center;
-justify-content: space-between;
-padding: 10px;
+.animes-recomendados .contenedor-prinscipal .flecha-izquierda:hover,
+.animes-recomendados .contenedor-prinscipal .flecha-derecha:hover{
+    background: rgba(0, 0, 0, .9);
 }
-.tarjetaCarrusel > img {
-    height: 50%;
-    width: 50%; 
-    background-size: cover;
+
+.animes-recomendados .contenedor-prinscipal .flecha-izquierda{
+    left: 0;
+}
+
+.animes-recomendados .contenedor-prinscipal .flecha-derecha{
+    right: 0;
+}
+
+/*--- Carrusel ---*/
+
+.animes-recomendados .contenedor-carrusel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.animes-recomendados .contenedor-carrusel .carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.animes-recomendados .contenedor-carrusel .carrusel .animes {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.animes-recomendados .contenedor-carrusel .carrusel .animes.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+.animes-recomendados .contenedor-carrusel .carrusel .animes img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/*--- Media Queries ---*/
+@media screen and (max-width: 800px) {
+    
+    .animes-recomendados .contenedor-carrusel{
+        overflow: visible;
+    }
+    .animes-recomendados .contenedor-carrusel .carrusel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .animes-recomendados .indicadores,
+    .animes-recomendados .flecha-izquierda,
+    .animes-recomendados .flecha-derecha{
+        display: none;
+    }
 }
