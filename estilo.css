@@ -161,3 +161,50 @@ header .logotipo {
         display: none;
     }
 }
+
+/*---contenedor titulo anime agregados---*/
+
+.animes-agregados-titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.animes-agregados-titulo h3{
+    color: black;
+    font-size: 30px;
+
+}
+
+/*--contenedor de animes agregados--*/
+
+.animes-agregados .animes-agregado-columna {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.animes-agregado .animes-agregados-columna .anime-columnas{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.animes-agregados .animes-agregado-contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.animes-agregados .animes-agregado-columna{
+    overflow: visible;
+
+}
+
+
+.animes-agregados .animes-agregado-columna .anime-columnas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
