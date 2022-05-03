@@ -1,5 +1,5 @@
 const fila = document.querySelector('.contenedor-carrusel')
-const animes = document.querySelectorAll('.animes')
+const animes = document.querySelectorAll('.animes, .lista')
 
 const flechaIzquierda = document.getElementById('flecha-izquierda')
 const flechaDerecha = document.getElementById('flecha-derecha')
@@ -54,7 +54,7 @@ animes.forEach((p) => {
 		setTimeout(() => {
 			animes.forEach(p => p.classList.remove('hover'));
 			elemento.classList.add('hover');
-		}, 300);
+		}, 200);
 	});
 });
 

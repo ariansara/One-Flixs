@@ -162,49 +162,46 @@ header .logotipo {
     }
 }
 
-/*---contenedor titulo anime agregados---*/
-
-.animes-agregados-titulo{
+/*---Titulo Animes agregados--- */
+.contenedor-titulo{
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
 
-.animes-agregados-titulo h3{
+.contenedor-titulo h3{
     color: black;
     font-size: 30px;
 
 }
-
-/*--contenedor de animes agregados--*/
-
-.animes-agregados .animes-agregado-columna {
+/*---contenedor prinsiplas2---*/ 
+.animes-agregados .contenedor-prinscipal2 {
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
-.animes-agregado .animes-agregados-columna .anime-columnas{
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-
-.animes-agregados .animes-agregado-contenedor{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.animes-agregados .animes-agregado-columna{
+.animes-agregados .contenedor-prinscipal2{
     overflow: visible;
-
 }
 
-
-.animes-agregados .animes-agregado-columna .anime-columnas{
+.animes-agregados .contenedor-prinscipal2 .contenedor-lista {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+.animes-agregados .contenedor-prinscipal2 .contenedor-lista .lista {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.animes-agregados .contenedor-prinscipal2 .contenedor-lista .lista.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+.animes-agregados .contenedor-prinscipal2 .contenedor-lista .lista img {
+    width: 100%;
+    vertical-align: top;
 }
