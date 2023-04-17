@@ -1,63 +1,32 @@
 const fila = document.querySelector('.contenedor-carrusel')
 const animes = document.querySelectorAll('.animes, .lista')
 
-const flechaIzquierda = document.getElementById('flecha-izquierda')
-const flechaDerecha = document.getElementById('flecha-derecha')
 
-//--- Movimiento para la flecha derecha ---
 
-flechaDerecha.addEventListener('click', () => {
-    fila.scrollLeft += fila.offsetWidth;
+var i = 0;
+var img = [];
+img[0] = "img/1.png";
+img[1] = "img/2.png";
+img[2] = "img/3.png";
+img[3] = "img/4.png";
+img[4] = "img/5.png";
+img[5] = "img/6.png";
 
-    const indicadorActivo = document.querySelector('.indicadores .activo');
-    if(indicadorActivo.nextSibling){
-        indicadorActivo.nextSibling.classList.add('activo');
-        indicadorActivo.classList.remove('activo');
+function flechaIzquierda(){
+    i--
+    if(i == 0){
+        i = 5;
     }
-});
-
-//--- Movimiento para la flecha izquierda ---
-
-flechaIzquierda.addEventListener('click', () => {
-	fila.scrollLeft -= fila.offsetWidth;
-
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.previousSibling){
-		indicadorActivo.previousSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
-//---Indicadores ---
-
-const numeroPagina = Math.ceil(animes.length / 5)
-for(let i = 0; i < numeroPagina; i++){
-    const indicador = document.createElement('button');
-
-    if(i==0){
-        indicador.classList.add('activo');
-    }
-
-    document.querySelector('.indicadores').appendChild(indicador);
-    indicador.addEventListener('click', (e) => {
-        fila.scrollLeft = i * fila.offsetWidth;
-
-        document.querySelector(' .indicadores .activo') .classList.remove('activo');
-        e.target.classList.add('activo');
-    })
+    document.getElementById("ani").src = img[i];
 }
 
-//--- Hover ---
+function flechaDerecha(){
+    i++
+    if(i == 6){
+        i = 0;
+    }
+    document.getElementById("ani").src = img[i];
+}
 
-animes.forEach((p) => {
-	p.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			animes.forEach(p => p.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 200);
-	});
-});
 
-fila.addEventListener('mouseleave', () => {
-	animes.forEach(p => p.classList.remove('hover'));
-});
+
