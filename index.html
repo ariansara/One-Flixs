@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,111 +14,70 @@
 
     <link rel="stylesheet" href="estilo.css">
 
-    <title>AnimeKawaii!!!</title>
+    <title>OneFlix</title>
 </head>
 
 <body>
     
     <header>
         <div class="contenedor">
-            <!--h2 class="logotipo">AnimeKawaii </h2-->
-            <img src="logo/logoAnimekawaii.png" alt="milogo" width="300">
+            
+            <img src="logo/logo1.png" alt="milogo" width="300">
             <nav>
                 <h4> 
                 <a href="#">Inicio</a>
                 <a href="#">Directorio</a>
                 <a href="#">Horario</a>
-                <a href="#">Top</a>
+                <a href="#"></a>
             </h4>
                
             </nav>
         </div>
 
-    </header>
+    </header> 
+    <div class="titulo-lista-Anime">
+        <h2 class="titulo-lista">Animes Agregados</h2>
+         <div class="lista-Anime" >
+            <ul>
+                <h4>
+                <li>Anime 1</li>
+                <li>Anime 2</li>
+                <li>Anime 3</li>
+                </h4>
+                
+            </ul>
+              
+        </div>
+    </div>
+    
    <main>
        <div class="anime-prinsipal">
+        
        </div>
 
        <div class="animes-recomendados contenedor">
+      
            <div class="contenedor-titulo-controles">
-               <h3>Animes recomendados</h3>
+               <h3>Titulo de Anime, Manga, peliculas, Ovas</h3>
                <div class="indicadores"> </div>
             </div>
 
             <div class="contenedor-prinscipal">
-                <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+                <button onclick="flechaIzquierda()" role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
                 <div class="contenedor-carrusel">
                     <div class="carrusel">
                         <div class="animes">
-                            <a href="#"><img src="img/1.png" alt="anime-1"></a>
+                            <img id= "ani" name ="ani" src="img/1.png" >
 
                         </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/2.png" alt="anime-2"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/3.png" alt="anime-3"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/4.png" alt="anime-4"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/5.png" alt="anime-5"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/6.png" alt="anime-6"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/7.png" alt="anime-7"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/8.png" alt="anime-8"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/9.png" alt="anime-9"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/10.png" alt="anime-10"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/11.png" alt="anime-11"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/12.png" alt="anime-12"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/1.png" alt="anime-13"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/2.png" alt="anime-14"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/3.png" alt="anime-15"></a>
-
-                        </div>
-                        <div class="animes">
-                            <a href="#"><img src="img/4.png" alt="anime-16"></a>
-
-                        </div>
+                        
+                        
                     </div>
                 </div>
 
 
-                <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                <button onclick="flechaDerecha()" role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
 
             </div>
 
@@ -129,7 +89,7 @@
 
        <div class="animes-agregados contenedor">
            <div class="contenedor-titulo">
-            <h3>Animes agregados</h3>
+            <h3>Anime</h3>
             </div>
 
             <div class="contenedor-prinscipal2">
