@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-family: "Mulish", sans-serif;
+    //background-image: url(img/fondo.png);
+    //background-color: rgb(247, 164, 236);
+}
+.contenedor {
+    width: 90%;
+    margin: auto;
+   
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 40px;
+   
+}

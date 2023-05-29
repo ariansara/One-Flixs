@@ -8,16 +8,137 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body{
     height: 100%;
-    font-family: "Mulish", sans-serif;
-    //background-image: url(img/fondo.png);
-    //background-color: rgb(247, 164, 236);
+   
+
+    background-color: rgb(0, 0, 0);
+     font-family: "Mulish", sans-serif;
 }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+.back {
+    padding: 32px 0;
+    background-color: red;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+   
+}
+
+.menu .navbar ul li a:hover {
+    color: #000;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+/*@media (max-width: 991px) {
+    
+    .menu{
+        padding: 30;
+       
+    }
+    .menu label{
+        display: initial;
+    }
+    .back{
+        padding: 30px 0;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: red;
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}*/
+
+
+
+
+
+nav {
+    font-family: "Chivo Mono",monospace;
+    display: flex;
+    gap: 72px;
+}
+
+nav h4 {
+    list-style: none;
+}
+
+nav h4 a {
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+nav h4 a:hover {
+    background-color: rgba(19, 1, 1, 0.877);
+}
+
+nav h4 a:active {
+    background-color: rgba(240, 6, 6, 0.2);
+}
+/*--------------------------------------*/
 .contenedor {
-    width: 90%;
+    width: 60%;
     margin: auto;
    
 }
@@ -25,22 +146,54 @@ body{
 .contenedor h4{
     color: rgb(250, 9, 190);
     font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    text-align: center;
+   
 }
 
-header {
+/* header {
     padding: 30px 0;
+    text-align: center;
+    background-color: rgb(253, 7, 7);
+   // background-image: url(img/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+     
 }
 
-header .contenedor {
+/* header .contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 17px;
-}
+    background-color: rgb(255, 1, 1);
+} */
 
-main{
+/*main{
     display:flex;
-}
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 253, 253);
+   
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}*/
 
 header .logotipo {
     font-family: 'Bebas Neue', cursive;
@@ -49,17 +202,27 @@ header .logotipo {
    
 }
 
+
+
 /*--- Contenedor Titulo y controles ---*/
 .contenedor-titulo-controles{
     display: flex;
     justify-content: space-between;
     align-items: end;
+    padding: 20px 0 17px;
+    background-color: rgb(255, 238, 0);
+
+
 
 }
 
 .contenedor-titulo-controles h3{
     color: black;
     font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0;
 
 }
 
@@ -70,6 +233,18 @@ header .logotipo {
   cursor: pointer;
   border: none;
   margin-right: 2px;
+
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-top: 2px;
+  border-radius: 2px;
+  border: 1px solid black;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
 
 }                                                
 
@@ -82,6 +257,7 @@ header .logotipo {
 /*--- Contenedor prisnsipal y flechas ---*/
 .animes-recomendados{
     margin-bottom: 70px;
+
 }
 
 .animes-recomendados .contenedor-prinscipal{
@@ -93,11 +269,11 @@ header .logotipo {
 .animes-recomendados .contenedor-prinscipal .flecha-izquierda,
 .animes-recomendados .contenedor-prinscipal .flecha-derecha{
     position: absolute;
-    border: none;
+    /*border: none;*/
     background: rgba(0,0,0,0.3);
     font-size: 40px;
-    height: 50%;
-    top: calc(50% - 25%);
+    /*height: 50%;*/
+    /*top: calc(50% - 25%);*/
     line-height: 40PX;
     width: 50px;
     color: #fff;
@@ -123,7 +299,7 @@ header .logotipo {
 /*--- Carrusel ---*/
 main{
     
-    background-color: rgba(255, 255, 255, 0.436);
+   /* background-color: rgba(255, 255, 255, 0.436);*/
     backdrop-filter: blur(5 px);
     width: 70%;
  
@@ -184,14 +360,29 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: end;
-    background-color: rgba(255,255,255, .50);
-    backdrop-filter: blur(1px);
+ 
+    
+
+
+    
+   
+
 }
 
 .contenedor-titulo h3{
-    color: black;
-    font-size: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
+    text-align: center;
+}
 
+.animes-agregados{
+    background-color: #000;
 }
 /*---contenedor prinsiplas2---*/ 
 .animes-agregados .contenedor-prinscipal2 {
@@ -199,16 +390,24 @@ main{
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    
+
 }
 
 .animes-agregados .contenedor-prinscipal2{
     overflow: visible;
+    -webkit-overflow-scrolling: touch;
+   
+
 }
 
 .animes-agregados .contenedor-prinscipal2 .contenedor-lista {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    align-items: center;
 }
 .animes-agregados .contenedor-prinscipal2 .contenedor-lista .lista {
     min-width: 20%;
@@ -225,11 +424,4 @@ main{
     vertical-align: top;
 }
 
-ul , .titulo-lista-Anime{
-	background-color: rgba(255,255,255, .50);
-	float: right;
-   
-    width: 230px;
 
-	
-  }
