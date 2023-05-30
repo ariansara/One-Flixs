@@ -1,0 +1,46 @@
+
+.conteiner{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left:auto; 
+}
+.conteiner-filas{
+    margin-bottom: 25px;
+    background-color: rgb(83, 81, 81);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+.filas{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
+.colum-img{
+    display: flex;
+    margin: 20px;
+}
+
+.colum-text{
+    position: relative;
+    margin: 20px;
+    color: aliceblue;
+}
+
+.anime-titulo{
+    margin-bottom: 20px;
+}
+
+.anime-titulo h3{
+    color: aliceblue;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.datos-columna{
+    margin: 20px;
+}
