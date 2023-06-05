@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio Simulacro</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito:ital,wght@1,200&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estiloContacto.css">
+  </head>
+<!--
+    Crear un formulario con:
+        Nombre (obligatorio)
+        Mensaje (obligatorio, máximo 200 caracteres)
+        Email (opcional, pero válido si lo ingresa)
+    Dar estilo particular al formulario
+    Validar campos
+    Mostrar lista con errores creando elementos del DOM
+    Cambiar estilo a campos con errores
+    Al enviar, si los datos está bien, agregar mensaje a una lista de mensajes, con el siguiente formato:
+    Si proveyó el email,
+    “<nombre> dice <mensaje>. Contacto: <email>.”
+    Si no,
+    “<nombre> dice <mensaje>.”
+    Limpiar los campos, errores de validación y cambios de estilo
+    Hacer foco en el primer input al iniciar el documento y luego de cada envío correcto
+-->
+<header>
+    <div class="back">
+      <div class="menu container">
+         <a href="#" class="logo">Onflix</a>
+         <input type="checkbox" id="menu"/>
+         <label for="menu">
+            <img src="OnePiece/img/menu.png" class="menu-icono" alt="">
+         </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./capitulo.html">Episodios</a></li>
+                    <li><a href="#">Mangas</a></li>
+                    <li><a href="#">Peliculas</a></li>
+                    <li><a href="./contacto.html">Contactanos</a></li>
+                </ul>
+            </nav>
+      </div>
+</div>
+
+</header> 
+  <body>
+    <div class="containerf">
+        <div class="tituloform">
+    <h1 class="titulof">Contactanos</h1>
+       </div>
+    <form onsubmit="return validar()" id="f_contacto">
+      <label for="f_nombre">Nombre</label>
+      <input id="f_nombre" autofocus />
+      <label for="f_email">Email</label>
+      <input id="f_email" />
+      <label for="f_mensaje">Mensaje</label>
+      <textarea id="f_mensaje" rows="3"></textarea>
+     
+      <button type="submit">Enviar</button>
+      <div id="errores">
+      </div>
+    </form>
+
+    <div id="mensajes">
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="js/contacto.js"></script>
+  </body>
+</html>
