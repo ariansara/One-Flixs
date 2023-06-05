@@ -18,10 +18,7 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-<<<<<<< Updated upstream
     background-color: rgb(83, 81, 81);
-=======
->>>>>>> Stashed changes
 
 }
 .colum-img{
@@ -31,11 +28,7 @@
 
 .colum-text{
     position: relative;
-<<<<<<< Updated upstream
     margin: 19px;
-=======
-    margin: 20px;
->>>>>>> Stashed changes
     color: aliceblue;
 }
 
